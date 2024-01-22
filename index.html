@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookingAppointmentApp</title>
+</head>
+
+<body>
+    <form onsubmit="saveTheData(event)">
+        <label for="username">username<input type="text" name="Name" id="username"></label><br>
+        <label for="emailId">email<input type="email" name="Name" id="emailId"></label><br>
+        <label for="number">phoneNo<input type="tel" name="number" id="phoneNo"></label><br>
+        <button>submit</button>
+    </form>
+
+    <ul id="listitem"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
