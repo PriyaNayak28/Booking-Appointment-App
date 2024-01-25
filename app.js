@@ -1,3 +1,4 @@
+
 function saveTheData(event) {
     event.preventDefault();
 
@@ -10,20 +11,40 @@ function saveTheData(event) {
         EMAIL,
         PHONE,
     }
+    showUserOnScreen(userDetails);
 
-    axios.post("https://crudcrud.com/api/3c1e5cf60ae649fb826b6cd325592f1f/bookingApp", userDetails)
+    axios.post("https://crudcrud.com/api/fef7860df30e459ba87d309f0855544c/Appointment-App", userDetails)
         .then((res) => {
             console.log(res);
         }).catch((err) => {
             console.log(err);
         })
+}
 
-    // let userDetail = JSON.stringify(userDetails);
-    // localStorage.setItem('userDetails', userDetail);
 
-    // let myObj = JSON.parse(localStorage.getItem('userDetails')); it is not 
 
-    localStorage.setItem(userDetails.EMAIL, JSON.stringify(userDetails));
+// let userDetail = JSON.stringify(userDetails);
+// localStorage.setItem('userDetails', userDetail);
+
+// let myObj = JSON.parse(localStorage.getItem('userDetails')); it is not 
+
+//localStorage.setItem(userDetails.EMAIL, JSON.stringify(userDetails));
+
+
+window.addEventListener("DOMContentLoaded", () => {
+    axios.get("https://crudcrud.com/api/fef7860df30e459ba87d309f0855544c/Appointment-App")
+        .then((response) => {
+            console.log(response);
+            //})
+            for (let i = 0; i < response.data.length; i++) {
+                showUserOnScreen(response.data[i])
+            }
+        }).catch((err) => {
+            console.log(err);
+        })
+});
+
+function showUserOnScreen(userDetails) {
 
     const newLi = document.createElement('li');
     const ul = document.getElementById('listitem');
@@ -38,7 +59,6 @@ function saveTheData(event) {
             ul.removeChild(deleteItem);
             localStorage.removeItem(userDetails.EMAIL);
         }
-
 
     })
     ul.addEventListener('click', function (event) {
@@ -55,4 +75,16 @@ function saveTheData(event) {
 
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
 
