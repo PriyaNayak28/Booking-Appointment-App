@@ -49,24 +49,15 @@ function showUserOnScreen(user) {
         removeUserFromScreen(user.EMAIL);
     }
 
-
-
     const parentNode = document.getElementById('listitem');
     const childHTML = `<li id=${user._id}>${user.NAME}-${user.EMAIL}-${user.PHONE} 
     <button onClick="deleteUser('${user._id}')">Delete</button>
     <button onClick="editUserDetails('${user._id}','${user.NAME}', '${user.EMAIL}','${user.PHONE}')">Edit</button></li>`;
 
-
     parentNode.innerHTML = parentNode.innerHTML + childHTML;
 }
 
-// function editUserDetails(username, emailId, phoneNo) {
-//     document.getElementById('username').value = userDetails.NAME;
-//     document.getElementById('emailId').value = userDetails.EMAIL;
-//     document.getElementById('phoneNo').value = userDetails.PHONE;
 
-//     deleteUser(userId);
-// }
 function editUserDetails(userId, username, emailId, phoneNo) {
     document.getElementById('username').value = username;
     document.getElementById('emailId').value = emailId;
@@ -74,8 +65,6 @@ function editUserDetails(userId, username, emailId, phoneNo) {
 
     deleteUser(userId);
 }
-
-
 
 function deleteUser(userId) {
     axios.delete(`https://crudcrud.com/api/041ec69436164f0497092ee0b570bc3a/booking-App/${userId}`)
