@@ -1,7 +1,5 @@
 # Booking-Appointment-App
 
-# Simple CRUD Application with Axios and Local Storage
-
 ## Description
 
 This project is a simple web application that uses **Axios** to perform **CRUD (Create, Read, Update, Delete)** operations. The data is fetched using an API and stored locally in the browser's **Local Storage** to ensure persistence. This project is great for practicing API requests with Axios and managing data locally with Local Storage.
