@@ -34,4 +34,4 @@ This project is a simple web application that uses **Axios** to perform **CRUD (
 1. **Clone the Repository**
 
    ```bash
-https://github.com/PriyaNayak28/Booking-Appointment-App/edit/main/README.md
+https://github.com/PriyaNayak28/Booking-Appointment-App
