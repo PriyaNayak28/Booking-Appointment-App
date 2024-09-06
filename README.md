@@ -29,7 +29,4 @@ This project is a simple web application that uses **Axios** to perform **CRUD (
 
 ### Installation
 
-1. **Clone the Repository**
-
-   ```bash
 https://github.com/PriyaNayak28/Booking-Appointment-App
